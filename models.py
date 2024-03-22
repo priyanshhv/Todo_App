@@ -13,3 +13,4 @@ class Task(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, index=True)
     task_description = Column(String)
+    is_done = Column(Boolean, default=False)
