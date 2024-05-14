@@ -26,7 +26,7 @@ def get_user_id_from_token(token: str) -> Optional[int]:
         if user_id is None:
             raise ValueError("Invalid token")
         return user_id
-    except (ValueError, jwt.exceptions.InvalidTokenError):
+    except ValueError:
         raise ValueError("Invalid token")
 
 
